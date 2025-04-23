@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Enquêteur</title>
+    <style>
+        body {
+            background-color: #9edef4;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            margin: 10px 1%;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .reset-btn {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Formulaire Enquêteur</h2>
+        <form id="f_enqueteur">
+            <label for="code_enqueteur">Code Enquêteur:</label>
+            <select name="code_enqueteur" id="code_enqueteur" required>
+                <option value="">Choisir</option>
+                <option value="01_AYALE_Achille">01_AYALE_Achille</option>
+                <option value="02_KPODAN_Brice">02_KPODAN_Brice</option>
+                <option value="03_FALOLA_Herman">03_FALOLA_Herman</option>
+                <option value="04_HOHOUNKPO_Alida">04_HOHOUNKPO_Alida</option>
+                <option value="05_BAKARI_Fadilath">05_BAKARI_Fadilath</option>
+                <option value="06_DAMASSO_Modeste">06_DAMASSO_Modeste</option>
+                <option value="10_DURAND_Mariette">10_DURAND_Mariette</option>
+                <option value="11_NOM_Prenom">11_NOM_Prenom</option>
+            </select>
+
+            <label for="nom_enqueteur">Nom:</label>
+            <input type="text" id="nom_enqueteur" name="nom_enqueteur" required>
+
+            <label for="prenom_enqueteur">Prénoms:</label>
+            <input type="text" id="prenom_enqueteur" name="prenom_enqueteur" required>
+
+            <label for="statut_enqueteur">Statut:</label>
+            <input type="text" id="statut_enqueteur" name="statut_enqueteur" required>
+
+            <button type="reset" class="reset-btn">EFFACER</button>
+            <button type="submit" class="submit-btn">VALIDER</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
